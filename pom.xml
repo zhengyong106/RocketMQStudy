@@ -16,6 +16,8 @@
         <module>rocketmq-filter-example</module>
         <module>rocketmq-logappender-example</module>
         <module>rocketmq-transaction-example</module>
+        <module>rocketmq-broadcasting-example</module>
+        <module>rocketmq-batch-example</module>
     </modules>
 
     <dependencies>
