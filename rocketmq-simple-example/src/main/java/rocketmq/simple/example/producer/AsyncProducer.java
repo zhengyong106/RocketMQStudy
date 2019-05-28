@@ -1,4 +1,4 @@
-package rocketmq.simple.example;
+package rocketmq.simple.example.producer;
 
 import org.apache.rocketmq.client.producer.DefaultMQProducer;
 import org.apache.rocketmq.client.producer.SendCallback;
@@ -20,7 +20,7 @@ public class AsyncProducer {
         for (int i = 0; i < 100; i++) {
             final int index = i;
             // 创建message实例, 指定topic, tag 和 message body
-            Message msg = new Message("TopicTest", "TagA", ("Hello RocketMQ " + i).getBytes(RemotingHelper.DEFAULT_CHARSET));
+            Message msg = new Message("TestTopic", "TagA", ("Hello RocketMQ " + i).getBytes(RemotingHelper.DEFAULT_CHARSET));
             // 通过send方法发送消息用以将消息传递给broker
             producer.send(msg, new SendCallback() {
                 @Override

@@ -15,7 +15,7 @@ public class OrderedConsumer {
         // 指定consumer从何处开始消费
         consumer.setConsumeFromWhere(ConsumeFromWhere.CONSUME_FROM_FIRST_OFFSET);
         // 为consumer订阅一个或者多个topic
-        consumer.subscribe("OrderTopic", "TagA || TagB || TagC || TagD || TagE");
+        consumer.subscribe("OrderTopic", "TagA");
 
         consumer.registerMessageListener((MessageListenerOrderly) (msgs, context) -> {
                         for (MessageExt msg: msgs) {
